@@ -26,9 +26,9 @@
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <script src="js/principal.js"></script>
+        <script src="js/index.js"></script>
         <link rel="stylesheet" type="text/css" href="lib/jquery.mobile-1.4.5.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
         <script src="lib/jquery-1.11.3.min.js"></script>
         <script src="lib/jquery.mobile-1.4.5.min.js"></script>
         
@@ -36,18 +36,49 @@
         <title>Hello World</title>
     </head>   
     <body>
+        
         <div data-role="page" id="inicio">  
             <div data-role="header">
-            <h1>La calcu</h1>
+            <h1>Calculadora</h1>
             </div>
             <div data-role="content">
-            <center>
-               <br> <input type="number" id="edit1">
-               <input type="number" id="edit2"><br/>
-                <br><input type="button" id="suma" value="sumar" OnClick="suma()"><br/>
-                <br><input type="button" id="resta" value="restar" OnClick="resta()"><br/>
-                <br><input type="button" id="multi" value="multiplicar" OnClick="multi()"><br/>
-                <br><input type="button" id="div" value="dividir" OnClick="divi()"><br/></center>        
+            
+                <input id="edit1"/>
+              
+                <br>
+                <center>
+                    <table>
+                    <tr>
+                    <td width=200 height=60><input style="background-color: #85a1ad"; type="button" id="limp" value="C"></td>
+                    <td width=200><input style="background-color: #85a1ad"  type="button" id="mm" value="+/-" ></td>
+                    <td width=200><input style="background-color: #85a1ad"  type="button" id="porce" value="%" ></td>
+                    <td width=200><input style="background-color: #eb5800"  type="button" class= "op" id="div" value="/" > </td>    
+                    </tr>
+                    <tr>
+                    <td height=60><input style="background-color: #85a1ad";height="100px" type="button" class="num" id="n7" value="7"OnClick="suma()"></td>
+                    <td><input style="background-color: #85a1ad" type="button" class="num" id="n8" value="8" ></td>
+                    <td><input style="background-color: #85a1ad"type="button" class="num" id="n9" value="9" ></td>
+                    <td><input style="background-color: #eb5800"type="button"  class= "op" id="multi" value="*" > </td> 
+                    </tr>
+                     <tr>
+                    <td height=60><input style="background-color: #85a1ad" type="button" class="num" id="n4" value="4"></td>
+                    <td><input style="background-color: #85a1ad" type="button" class="num" id="n5" value="5" ></td>
+                    <td><input style="background-color: #85a1ad"type="button" class="num" id="n6" value="6" ></td>
+                    <td><input style="background-color: #eb5800"type="button" class= "op" id="resta" value="-" > </td> 
+                    </tr>
+                    <tr>
+                     <td height=60><input style="background-color: #85a1ad" type="button" class="num" id="n1" value="1" ></td>
+                    <td><input style="background-color: #85a1ad" type="button" class="num" id="n2" value="2" ></td>
+                    <td><input style="background-color: #85a1ad"type="button" class="num" id="n3" value="3" ></td>
+                    <td><input style="background-color: #eb5800"type="button" class= "op" id="suma" value="+" > </td> 
+                    </tr>
+                    </table>
+                    <table>                    
+                    <td width=500><input style="background-color: #85a1ad" type="button" class="num" id="n0" value="0"></td>
+                    <td width=200><input style="background-color: #85a1ad" type="button"  id="np" value="."></td>
+                    <td width=200><input style="background-color: #eb5800"type="button"  id="resul" value="=" ></td>                   
+                    </table>
+                    </center>
             </div>
             
         </div>
